@@ -1,0 +1,1495 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nesøya G2016 — Årsplan 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --pitch: #2E7D32;
+    --pitch-light: #43A047;
+    --pitch-stripe: #388E3C;
+    --blue: #1565C0;
+    --blue-bright: #1976D2;
+    --blue-glow: #1E88E5;
+    --blue-bg: #E3F2FD;
+    --green: #2E7D32;
+    --green-bright: #388E3C;
+    --green-bg: #E8F5E9;
+    --dark: #FAFBFC;
+    --dark-card: #FFFFFF;
+    --dark-surface: #F1F5F9;
+    --dark-border: #E2E8F0;
+    --white: #1E293B;
+    --white-dim: #64748B;
+    --gold: #D97706;
+    --gold-dark: #B45309;
+    --red: #DC2626;
+    --red-bg: #FEF2F2;
+    --orange: #EA580C;
+    --orange-bg: #FFF7ED;
+    --purple: #7C3AED;
+    --purple-bg: #F5F3FF;
+    --radius: 8px;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'DM Sans', system-ui, sans-serif;
+    background: var(--dark);
+    color: var(--white);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23e2e8f0' fill-opacity='0.3'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+
+  /* ═══ HEADER: STADIUM HERO ═══ */
+  .header {
+    background: linear-gradient(135deg, #1B5E20 0%, #2E7D32 40%, #1565C0 100%);
+    padding: 3rem 1.5rem 2.5rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    color: #fff;
+  }
+  .header::before {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 60px;
+    background: repeating-linear-gradient(
+      90deg,
+      rgba(255,255,255,0.04) 0px, rgba(255,255,255,0.04) 40px,
+      rgba(255,255,255,0.08) 40px, rgba(255,255,255,0.08) 80px
+    );
+  }
+  .header::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 50%;
+    transform: translateX(-50%);
+    width: 120px; height: 60px;
+    border: 2px solid rgba(255,255,255,0.15);
+    border-bottom: none;
+    border-radius: 60px 60px 0 0;
+  }
+  .ball-icon {
+    font-size: 2.8rem;
+    margin-bottom: 0.5rem;
+    filter: drop-shadow(0 4px 12px rgba(0,0,0,0.5));
+    animation: bounce 3s ease-in-out infinite;
+  }
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+  }
+  .header .club-name {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: #FFD54F;
+    position: relative;
+  }
+  .header h1 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 2.8rem;
+    font-weight: 900;
+    letter-spacing: -0.5px;
+    text-transform: uppercase;
+    line-height: 1;
+    margin: 0.25rem 0 0.4rem;
+    position: relative;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+  }
+  .header .subtitle {
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.7);
+    position: relative;
+  }
+  .team-badges {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1.25rem;
+    flex-wrap: wrap;
+    position: relative;
+  }
+  .team-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1.2rem;
+    border-radius: 6px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+  .team-badge.blaa {
+    background: rgba(21,101,192,0.2);
+    border: 2px solid rgba(255,255,255,0.5);
+    box-shadow: 0 0 12px rgba(21,101,192,0.3);
+  }
+  .team-badge.gronn {
+    background: rgba(46,125,50,0.2);
+    border: 2px solid rgba(255,255,255,0.5);
+    box-shadow: 0 0 12px rgba(46,125,50,0.3);
+  }
+  .team-badge .dot {
+    width: 12px; height: 12px;
+    border-radius: 50%;
+  }
+  .team-badge.blaa .dot { background: #60A5FA; box-shadow: 0 0 6px #60A5FA; }
+  .team-badge.gronn .dot { background: #4ADE80; box-shadow: 0 0 6px #4ADE80; }
+
+  /* ═══ NAVIGATION: SCOREBOARD TAB STRIP ═══ */
+  .nav {
+    background: #FFFFFF;
+    border-bottom: 3px solid var(--pitch);
+    padding: 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  }
+  .nav-inner {
+    display: flex;
+    max-width: 1100px;
+    margin: 0 auto;
+    min-width: max-content;
+  }
+  .nav a {
+    text-decoration: none;
+    color: var(--white-dim);
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    padding: 0.85rem 1rem;
+    white-space: nowrap;
+    transition: all 0.2s;
+    border-bottom: 3px solid transparent;
+    margin-bottom: -2px;
+  }
+  .nav a:hover {
+    color: var(--white);
+    border-bottom-color: var(--gold);
+    background: rgba(255,255,255,0.04);
+  }
+
+  /* ═══ MAIN CONTAINER ═══ */
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1.5rem 1rem 3rem;
+  }
+
+  /* ═══ SECTIONS ═══ */
+  .section { margin-bottom: 1.25rem; }
+  .section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    background: #FFFFFF;
+    padding: 1rem 1.25rem;
+    border-radius: var(--radius) var(--radius) 0 0;
+    border: 1px solid var(--dark-border);
+    border-bottom: none;
+    border-left: 4px solid var(--pitch);
+    user-select: none;
+    transition: background 0.15s;
+  }
+  .section-header:hover { background: #F8FAF8; }
+  .section.collapsed .section-header {
+    border-radius: var(--radius);
+    border-bottom: 1px solid var(--dark-border);
+  }
+  .section-header h2 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .section-header .toggle {
+    font-size: 1rem;
+    color: var(--white-dim);
+    transition: transform 0.2s;
+  }
+  .section.collapsed .toggle { transform: rotate(-90deg); }
+  .section-body {
+    background: #FFFFFF;
+    padding: 1.25rem;
+    border: 1px solid var(--dark-border);
+    border-top: none;
+    border-radius: 0 0 var(--radius) var(--radius);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  }
+  .section.collapsed .section-body { display: none; }
+
+  /* ═══ TABLES ═══ */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.875rem;
+  }
+  th {
+    text-align: left;
+    padding: 0.6rem 0.75rem;
+    background: var(--dark-surface);
+    color: var(--gold);
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    border-bottom: 2px solid var(--pitch);
+  }
+  td {
+    padding: 0.6rem 0.75rem;
+    border-bottom: 1px solid var(--dark-border);
+    color: var(--white);
+  }
+  tr:last-child td { border-bottom: none; }
+  tr:hover td { background: rgba(255,255,255,0.03); }
+  td a { color: var(--blue-bright); text-decoration: none; }
+  td a:hover { text-decoration: underline; }
+
+  /* ═══ TAGS: MATCH-DAY BADGES ═══ */
+  .tag {
+    display: inline-block;
+    padding: 0.15rem 0.55rem;
+    border-radius: 4px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+  .tag-blue { background: #DBEAFE; color: #1E40AF; border: 1px solid #93C5FD; }
+  .tag-green { background: #DCFCE7; color: #166534; border: 1px solid #86EFAC; }
+  .tag-red { background: #FEE2E2; color: #B91C1C; border: 1px solid #FCA5A5; }
+  .tag-orange { background: #FFF7ED; color: #C2410C; border: 1px solid #FDBA74; }
+  .tag-purple { background: #F5F3FF; color: #6D28D9; border: 1px solid #C4B5FD; }
+  .tag-home {
+    background: #DCFCE7; color: #166534;
+    border: 1px solid #86EFAC;
+  }
+  .tag-away {
+    background: #FFF7ED; color: #C2410C;
+    border: 1px solid #FDBA74;
+  }
+
+  /* ═══ CALENDAR: FIXTURE LIST ═══ */
+  .calendar-month { margin-bottom: 1.75rem; }
+  .calendar-month h3 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--gold);
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--dark-border);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .cal-event {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding: 0.7rem 0.5rem;
+    border-bottom: 1px solid var(--dark-border);
+    border-radius: 6px;
+    margin-bottom: 2px;
+    transition: background 0.15s;
+  }
+  .cal-event:hover { background: rgba(255,255,255,0.03); }
+  .cal-event:last-child { border-bottom: none; }
+  .cal-date {
+    min-width: 52px;
+    text-align: center;
+    flex-shrink: 0;
+    background: #FFFFFF;
+    border-radius: 6px;
+    padding: 0.4rem 0.3rem;
+    border: 1px solid var(--dark-border);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .cal-date .day {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: var(--white);
+    line-height: 1;
+  }
+  .cal-date .weekday {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.65rem;
+    color: var(--white-dim);
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+  }
+  .cal-info { flex: 1; }
+  .cal-info .title {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--white);
+  }
+  .cal-info .detail {
+    font-size: 0.8rem;
+    color: var(--white-dim);
+    margin-top: 0.1rem;
+  }
+  .cal-event.red-day { opacity: 0.5; }
+  .cal-event.red-day .cal-date { border-color: #7F1D1D; }
+  .cal-event.red-day .cal-date .day { color: var(--red); }
+
+  /* Match event highlight */
+  .cal-event.match-event { border-left: 3px solid var(--blue); padding-left: 0.75rem; }
+  .cal-event.match-event.gronn-match { border-left-color: var(--green); }
+
+  /* Training event */
+  .cal-event.training-event {
+    background: #F5F3FF;
+    border: 1px solid #DDD6FE;
+    border-left: 3px solid #7C3AED;
+    padding: 0.7rem 0.75rem;
+  }
+  .cal-event.training-event .cal-date { background: transparent; border: none; box-shadow: none; }
+  .cal-event.training-event .cal-date .day { color: #7C3AED; }
+
+  /* Special event */
+  .cal-event.special-event {
+    background: #FFF7ED;
+    border: 1px solid #FDBA74;
+    border-left: 3px solid #EA580C;
+    padding: 0.7rem 0.75rem;
+  }
+  .cal-event.special-event .cal-date { background: transparent; border: none; box-shadow: none; }
+  .cal-event.special-event .cal-date .day { color: #EA580C; }
+
+  /* Cup event */
+  .cal-event.cup-event {
+    background: linear-gradient(90deg, #DBEAFE, #DCFCE7);
+    border: 1px solid #D97706;
+    border-left: 3px solid #D97706;
+    padding: 0.7rem 0.75rem;
+  }
+  .cal-event.cup-event .cal-date { background: transparent; border: none; box-shadow: none; }
+  .cal-event.cup-event .cal-date .day { color: #D97706; }
+
+  /* Summer break */
+  .summer-break {
+    text-align: center;
+    padding: 1.5rem;
+    color: var(--white-dim);
+    font-style: italic;
+    background: var(--dark-surface);
+    border-radius: var(--radius);
+    border: 1px dashed var(--dark-border);
+  }
+
+  /* ═══ CHECKLIST ═══ */
+  .checklist { list-style: none; }
+  .checklist li {
+    padding: 0.7rem 0;
+    border-bottom: 1px solid var(--dark-border);
+    display: flex;
+    align-items: flex-start;
+    gap: 0.6rem;
+    font-size: 0.9rem;
+    color: var(--white);
+  }
+  .checklist li:last-child { border-bottom: none; }
+  .checklist input[type="checkbox"] {
+    margin-top: 0.3rem;
+    width: 18px; height: 18px;
+    accent-color: var(--green-bright);
+    flex-shrink: 0;
+  }
+
+  /* ═══ TRAINING SESSION TIMELINE ═══ */
+  .timeline-block {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+    align-items: stretch;
+  }
+  .timeline-time {
+    min-width: 70px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--gold);
+    padding-top: 0.7rem;
+    text-align: right;
+    flex-shrink: 0;
+  }
+  .timeline-content {
+    flex: 1;
+    background: var(--dark-surface);
+    border-left: 4px solid var(--pitch);
+    padding: 0.7rem 1rem;
+    border-radius: 0 var(--radius) var(--radius) 0;
+  }
+  .timeline-content h4 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    color: var(--white);
+    margin-bottom: 0.1rem;
+  }
+  .timeline-content p {
+    font-size: 0.8rem;
+    color: var(--white-dim);
+  }
+
+  /* ═══ FOCUS CARDS ═══ */
+  .focus-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 0.75rem;
+  }
+  .focus-card {
+    background: var(--dark-surface);
+    border: 1px solid var(--dark-border);
+    border-radius: var(--radius);
+    padding: 1rem 1.25rem;
+    border-top: 3px solid var(--pitch);
+    transition: transform 0.15s, box-shadow 0.15s;
+  }
+  .focus-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+  }
+  .focus-card h4 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--white);
+    margin-bottom: 0.4rem;
+  }
+  .focus-card p {
+    font-size: 0.85rem;
+    color: var(--white-dim);
+    line-height: 1.5;
+  }
+  .focus-card .month-label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.3rem;
+  }
+
+  /* ═══ EQUIPMENT GRID ═══ */
+  .equip-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 0.5rem;
+  }
+  .equip-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 0.75rem;
+    background: var(--dark-surface);
+    border-radius: 6px;
+    font-size: 0.85rem;
+    border: 1px solid var(--dark-border);
+    color: var(--white);
+  }
+
+  /* ═══ LINK CARDS ═══ */
+  .link-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 0.5rem;
+  }
+  .link-card {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+    background: var(--dark-surface);
+    border: 1px solid var(--dark-border);
+    border-radius: var(--radius);
+    text-decoration: none;
+    color: var(--white);
+    transition: all 0.2s;
+    font-size: 0.85rem;
+  }
+  .link-card:hover {
+    border-color: var(--blue);
+    background: var(--blue-bg);
+    box-shadow: 0 0 10px rgba(21,101,192,0.2);
+  }
+  .link-icon {
+    width: 38px; height: 38px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+    background: var(--dark-card);
+    border: 1px solid var(--dark-border);
+  }
+
+  /* ═══ NFF RULES ═══ */
+  .rule-list { list-style: none; }
+  .rule-list li {
+    padding: 0.6rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    font-size: 0.9rem;
+    border-bottom: 1px solid var(--dark-border);
+    color: var(--white);
+  }
+  .rule-list li:last-child { border-bottom: none; }
+  .rule-list li::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0.95rem;
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: var(--pitch);
+    box-shadow: 0 0 4px var(--pitch-light);
+  }
+
+  /* ═══ INFO BOX ═══ */
+  .info-box {
+    background: var(--dark-surface);
+    border: 1px solid var(--dark-border);
+    border-left: 4px solid var(--blue);
+    border-radius: 0 var(--radius) var(--radius) 0;
+    padding: 0.75rem 1rem;
+    font-size: 0.85rem;
+    color: var(--white-dim);
+    margin-bottom: 1rem;
+  }
+  .info-box.warn {
+    border-left-color: var(--orange);
+  }
+
+  /* ═══ FOOTER ═══ */
+  .footer {
+    text-align: center;
+    padding: 2.5rem 1rem;
+    color: #64748B;
+    font-size: 0.8rem;
+    border-top: 3px solid var(--pitch);
+    margin-top: 2rem;
+    background: #F1F5F9;
+  }
+  .footer .logo { font-size: 1.5rem; margin-bottom: 0.5rem; }
+
+  /* ═══ PRINT ═══ */
+  @media print {
+    .nav { display: none; }
+    .section.collapsed .section-body { display: block !important; }
+    body { background: white; color: #111; }
+    .header { background: #1B5E20; }
+    .section-body, .dark-card { background: white; border-color: #ddd; }
+    td, .cal-info .title, .checklist li, .rule-list li, .equip-item,
+    .focus-card h4, .timeline-content h4 { color: #111; }
+    .cal-info .detail, .timeline-content p, .focus-card p, .info-box { color: #555; }
+  }
+
+  /* ═══ MOBILE ═══ */
+  @media (max-width: 640px) {
+    .header h1 { font-size: 2rem; }
+    .header { padding: 2rem 1rem 2rem; }
+    .container { padding: 1rem 0.75rem 2rem; }
+    .section-body { padding: 1rem; }
+    .focus-grid { grid-template-columns: 1fr; }
+    .link-grid { grid-template-columns: 1fr; }
+    table { font-size: 0.8rem; }
+    th, td { padding: 0.4rem 0.5rem; }
+    .timeline-block { flex-direction: column; gap: 0.2rem; }
+    .timeline-time { text-align: left; min-width: auto; padding-top: 0; }
+    .nav a { padding: 0.75rem 0.75rem; font-size: 0.8rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="header">
+  <div class="ball-icon">⚽</div>
+  <div class="club-name">Nesøya IL Fotball</div>
+  <h1>G2016 Årsplan 2026</h1>
+  <div class="subtitle">Sesongoversikt for trenere og lagledere</div>
+  <div class="team-badges">
+    <span class="team-badge blaa"><span class="dot"></span>Nesøya G10 Blå — avd. 05</span>
+    <span class="team-badge gronn"><span class="dot"></span>Nesøya G10 Grønn — avd. 04</span>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="#oversikt">Oversikt</a>
+    <a href="#kalender">Kamper</a>
+    <a href="#nff">NFF-regler</a>
+    <a href="#treningsfokus">Fokus</a>
+    <a href="#treningsokt">Treningsøkt</a>
+    <a href="#todo">Gjøremål</a>
+    <a href="#utstyr">Utstyr</a>
+    <a href="#kontakter">Kontakter</a>
+    <a href="#lenker">Lenker</a>
+  </div>
+</nav>
+
+<div class="container">
+
+<!-- 1. TEAM OVERVIEW -->
+<div class="section" id="oversikt">
+  <div class="section-header" onclick="toggleSection(this)">
+    <h2>⚽ Lagoversikt</h2>
+    <span class="toggle">▼</span>
+  </div>
+  <div class="section-body">
+    <div class="info-box">
+      To lag i G10 7er-serien 2026. Vårkamper april–juni, høstkamper august–oktober. Trening mandager 18:00–19:00 på Nesøya Fotballbane.
+    </div>
+    <table>
+      <thead>
+        <tr><th>Lag</th><th>Avdeling</th><th>Kamper</th><th>Format</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="tag tag-blue">Blå</span> Nesøya G10 Blå</td>
+          <td>G10 år 7er avd. 05</td>
+          <td>9 vår + 9 høst</td>
+          <td>7v7</td>
+        </tr>
+        <tr>
+          <td><span class="tag tag-green">Grønn</span> Nesøya G10 Grønn</td>
+          <td>G10 år 7er avd. 04</td>
+          <td>9 vår + 9 høst</td>
+          <td>7v7</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3 style="margin-top:1.25rem; margin-bottom:0.75rem; font-family:'Barlow Condensed'; font-size:1rem; font-weight:700; text-transform:uppercase; letter-spacing:0.05em; color:var(--gold);">Trenerstab</h3>
+    <table>
+      <thead>
+        <tr><th>Rolle</th><th>Navn</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Lagleder</td><td>Per William Frøisland</td></tr>
+        <tr><td>Trener</td><td>Eskil Hytten</td></tr>
+        <tr><td>Trener</td><td>Fredrik Jore</td></tr>
+        <tr><td>Trener</td><td>Ole-Christian Ekeberg</td></tr>
+        <tr><td>Trener</td><td>Robin Johansson</td></tr>
+        <tr><td>Trener</td><td>Øyvind Rasmussen</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- 2. CALENDAR -->
+<div class="section" id="kalender">
+  <div class="section-header" onclick="toggleSection(this)">
+    <h2>📅 Sesongkalender</h2>
+    <span class="toggle">▼</span>
+  </div>
+  <div class="section-body">
+    <div class="info-box">
+      Komplett sesong april–oktober. <span class="tag tag-blue">Blå</span> <span class="tag tag-green">Grønn</span> = kamper, <span class="tag tag-purple">Trening</span> = fellestrening, <span class="tag tag-orange">Hendelse</span> = øvrige.
+    </div>
+    <div class="info-box warn">
+      Røde dager er markert. Ikke planlegg trening på disse dagene.
+    </div>
+
+    <!-- APRIL -->
+    <div class="calendar-month">
+      <h3>⚡ April 2026</h3>
+
+      <div class="cal-event red-day">
+        <div class="cal-date"><div class="day">2</div><div class="weekday">Tor</div></div>
+        <div class="cal-info"><div class="title"><span class="tag tag-red">Rød dag</span> Skjærtorsdag</div></div>
+      </div>
+      <div class="cal-event red-day">
+        <div class="cal-date"><div class="day">3</div><div class="weekday">Fre</div></div>
+        <div class="cal-info"><div class="title"><span class="tag tag-red">Rød dag</span> Langfredag</div></div>
+      </div>
+      <div class="cal-event red-day">
+        <div class="cal-date"><div class="day">5</div><div class="weekday">Søn</div></div>
+        <div class="cal-info"><div class="title"><span class="tag tag-red">Rød dag</span> 1. påskedag</div></div>
+      </div>
+      <div class="cal-event red-day">
+        <div class="cal-date"><div class="day">6</div><div class="weekday">Man</div></div>
+        <div class="cal-info"><div class="title"><span class="tag tag-red">Rød dag</span> 2. påskedag</div></div>
+      </div>
+
+      <div class="cal-event training-event">
+        <div class="cal-date"><div class="day">13</div><div class="weekday">Man</div></div>
+        <div class="cal-info">
+          <div class="title"><span class="tag tag-purple">Trening</span> Fellestrening</div>
+          <div class="detail">Kl 18:00–19:00 — Nesøya Fotballbane</div>
+        </div>
+      </div>
+
+      <div class="cal-event">
+        <div class="cal-date"><div class="day">14</div><div class="weekday">Tir</div></div>
+        <div class="cal-info">
+          <div class="title"><span class="tag tag-green">Grønn</span> vs Øvrevoll Hosle 1 <span class="tag tag-home">Hjemme</span></div>
+          <div class="detail">Kl 19:00 — Nesøya kunstgress 7er B</div>
+        </div>
+      </div>
+
+      <div class="cal-event">
+        <div class="cal-date"><div class="day">17</div><div class="weekday">Fre</div></div>
+        <div class="cal-info">
+          <div class="title"><span class="tag tag-blue">Blå</span> vs Øvrevoll Hosle Snakes <span class="tag tag-away">Borte</span></div>
+          <div class="detail">Kl 17:00 — Jarmyra kunstgress 7er A</div>
+        </div>
+      </div>
+
+      <div class="cal-event training-event">
+        <div class="cal-date"><div class="day">20</div><div class="weekday">Man</div></div>
+        <div class="cal-info">
+          <div class="title"><span class="tag tag-purple">Trening</span> Fellestrening</div>
+          <div class="detail">Kl 18:00–19:00 — Nesøya Fotballbane</div>
+        </div>
+      </div>
+
+      <div class="cal-event">
+        <div class="cal-date"><div class="day">21</div><div class="weekday">Tir</div></div>
+        <div class="cal-info">
+          <div class="title"><span class="tag tag-blue">Blå</span> vs Stabæk 5 <span class="tag tag-home">Hjemme</span></div>
+          <div class="detail">Kl 19:00 — Nesøya kunstgress 7er A</div>
+          <div class="title" style="margin-top:0.4rem;"><span class="tag tag-green">Grønn</span> vs Hvalstad City <span class="tag tag-away">Borte</span></div>
+          <div class="detail">Kl 19:00 — Hvalstad Idrettspark kunstgress 7er</div>
+        </div>
+      </div>
+
+      <div class="cal-event training-event">
+        <div class="cal-date"><div class="day">27</div><div class="weekday">Man</div></div>
+        <div class="cal-info">
+          <div class="title"><span class="tag tag-purple">Trening</span> Fellestrening</div>
+          <div class="detail">Kl 18:00–19:00 — Nesøya Fotballbane</div>
+        </div>
+      </div>
+
+      <div class="cal-event">
+        <div class="cal-date"><div class="day">28</div><div class="weekday">Tir</div></div>
+        <div class="cal-info">
+          <div class="title"><span class="tag tag-green">Grønn</span> vs Frisk Asker 1 <span class="tag tag-home">Hjemme</span></div>
+          <div class="detail">Kl 18:00 — Nesøya kunstgress 7er B</div>
+        </div>
+      </div>
+
+      <div class="cal-event">
+        <div class="cal-date"><div class="day">29</div><div class="weekday">Ons</div></div>
+        <div class="cal-info">
+          <div class="title"><span class="tag tag-blue">Blå</span> vs Gui Blå 2 <span class="tag tag-away">Borte</span></div>
+          <div class="detail">Kl 19:00 — Arnestad kunstgress 7er 2</div>
+        </div>
+      </div>
+
+      <div class="cal-event special-event">
+        <div class="cal-date"><div class="day">~</div><div class="weekday"></div></div>
+        <div class="cal-info">
+          <div class="title"><span class="tag tag-orange">Hendelse</span> Foreldremøte (anbefalt april/mai)</div>
+          <div class="detail">Dato ikke fastsatt ennå</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MAY -->
+    <div class="calendar-month">
+      <h3>⚡ Mai 2026</h3>
+
+      <div class="cal-event red-day">
+        <div class="cal-date"><div class="day">1</div><div class="weekday">Fre</div></div>
+        <div class="cal-info"><div class="title"><span class="tag tag-red">Rød dag</span> 1. mai</div></div>
+      </div>
+
+      <div class="cal-event training-event">
+        <div class="cal-date"><div class="day">4</div><div class="weekday">Man</div></div>
+        <div class="cal-info">
+          <div class="title"><span class="tag tag-purple">Trening</span> Fellestrening</div>
+          <div class="detail">Kl 18:00–19:00 — Nesøya Fotballbane</div>
+        </div>
+      </div>
+
+      <div class="cal-event">
+        <div class="cal-date"><div class="day">6</div><div class="weekday">Ons</div></div>
+        <div class="cal-info">
+          <div class="title"><span class="tag tag-green">Grønn</span> vs Gui Blå 1 <span class="tag tag-away">Borte</span></div>
+          <div class="detail">Kl 19:00 — Arnestad kunstgress 7er 1</div>
+        </div>
+      </div>
+
+      <div class="cal-event">
+        <div class="cal-date"><div class="day">7</div><div class="weekday">Tor</div></div>
+        <div class="cal-info">
+          <div class="title"><span class="tag tag-blue">Blå</span> vs Hvalstad United <span class="tag tag-home">Hjemme</span></div>
+          <div class="detail">Kl 19:00 — Nesøya kunstgress 7er A</div>
+        </div>
+      </div>
+
+      <div class="cal-event training-event">
+        <div class="cal-date"><div class="day">11</div><div class="weekday">Man</div></div>
+        <div class="cal-info">
+          <div class="title"><span class="tag tag-purple">Trening</span> Fellestrening</div>
+          <div class="detail">Kl 18:00–19:00 — Nesøya Fotballbane</div>
+        </div>
+      </div>
+
+      <div class="cal-event red-day">
+        <div class="cal-date"><div class="day">14</div><div class="weekday">Tor</div></div>
+        <div class="cal-info"><div class="title"><span class="tag tag-red">Rød dag</span> Kristi himmelfartsdag</div></div>
+      </div>
+
+      <div class="cal-event red-day">
+        <div class="cal-date"><div class="day">17</div><div class="weekday">Søn</div></div>
+        <div class="cal-info"><div class="title"><span class="tag tag-red">Rød dag</span> Grunnlovsdagen (17. mai)</div></div>
+      </div>
+
+      <div class="cal-event training-event">
+        <div class="cal-date"><div class="day">18</div><div class="weekday">Man</div></div>
+        <div class="cal-info">
+          <div class="title"><span class="tag tag-purple">Trening</span> Fellestrening</div>
+          <div class="detail">Kl 18:00–19:00 — Nesøya Fotballbane</div>
+        </div>
+      </div>
+
+      <div class="cal-event">
+        <div class="cal-date"><div class="day">19</div><div class="weekday">Tir</div></div>
+        <div class="cal-info">
+          <div class="title"><span class="tag tag-green">Grønn</span> vs Lommedalen Gul <span class="tag tag-away">Borte</span></div>
+          <div class="detail">Kl 19:00 — Lommedalen kg øvre 7er A</div>
+        </div>
+      </div>
+
+      <div class="cal-event">
+        <div class="cal-date"><div class="day">21</div><div class="weekday">Tor</div></div>
+        <div class="cal-info">
+          <div class="title"><span class="tag tag-blue">Blå</span> vs Holmen Falcons <span class="tag tag-home">Hjemme</span></div>
+          <div class="detail">Kl 19:00 — Nesøya kunstgress 7er A</div>
+        </div>
+      </div>
+
+      <div class="cal-event red-day">
+        <div class="cal-date"><div class="day">24</div><div class="weekday">Søn</div></div>
+        <div class="cal-info"><div class="title"><span class="tag tag-red">Rød dag</span> 1. pinsedag</div></div>
+      </div>
+      <div class="cal-event red-day">
+        <div class="cal-date"><div class="day">25</div><div class="weekday">Man</div></div>
+        <div class="cal-info">
+          <div class="title"><span class="tag tag-red">Rød dag</span> 2. pinsedag</div>
+          <div class="detail">Ingen trening — rød dag</div>
+        </div>
+      </div>
+
+      <div class="cal-event">
+        <div class="cal-date"><div class="day">28</div><div class="weekday">Tor</div></div>
+        <div class="cal-info">
+          <div class="title"><span class="tag tag-blue">Blå</span> vs Lommedalen Lions <span class="tag tag-away">Borte</span></div>
+          <div class="detail">Kl 19:00 — Helset kunstgr. 7er A</div>
+          <div class="title" style="margin-top:0.4rem;"><span class="tag tag-green">Grønn</span> vs Holmen Eagles <span class="tag tag-home">Hjemme</span></div>
+          <div class="detail">Kl 19:00 — Nesøya kunstgress 7er B</div>
+        </div>
+      </div>
+
+      <div class="cal-event special-event">
+        <div class="cal-date"><div class="day">~</div><div class="weekday"></div></div>
+        <div class="cal-info">
+          <div class="title"><span class="tag tag-orange">Kurs</span> Grasrottrenerkurs del 1 (web + klasserom)</div>
+          <div class="detail">Påmelding via minidrett.no — min. 1 trener per lag</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- JUNE -->
+    <div class="calendar-month">
+      <h3>⚡ Juni 2026</h3>
+
+      <div class="cal-event training-event">
+        <div class="cal-date"><div class="day">1</div><div class="weekday">Man</div></div>
+        <div class="cal-info">
+          <div class="title"><span class="tag tag-purple">Trening</span> Fellestrening</div>
+          <div class="detail">Kl 18:00–19:00 — Nesøya Fotballbane</div>
+        </div>
+      </div>
+
+      <div class="cal-event">
+        <div class="cal-date"><div class="day">2</div><div class="weekday">Tir</div></div>
+        <div class="cal-info">
+          <div class="title"><span class="tag tag-blue">Blå</span> vs Haslum 4 <span class="tag tag-home">Hjemme</span></div>
+          <div class="detail">Kl 19:00 — Nesøya kunstgress 7er A</div>
+          <div class="title" style="margin-top:0.4rem;"><span class="tag tag-green">Grønn</span> vs Billingstad Lyn <span class="tag tag-away">Borte</span></div>
+          <div class="detail">Kl 19:00 — RSM Billingstad 7er</div>
+        </div>
+      </div>
+
+      <div class="cal-event training-event">
+        <div class="cal-date"><div class="day">8</div><div class="weekday">Man</div></div>
+        <div class="cal-info">
+          <div class="title"><span class="tag tag-purple">Trening</span> Fellestrening</div>
+          <div class="detail">Kl 18:00–19:00 — Nesøya Fotballbane</div>
+        </div>
+      </div>
+
+      <div class="cal-event">
+        <div class="cal-date"><div class="day">9</div><div class="weekday">Tir</div></div>
+        <div class="cal-info">
+          <div class="title"><span class="tag tag-blue">Blå</span> vs Asker SK Bondi 2 <span class="tag tag-away">Borte</span></div>
+          <div class="detail">Kl 19:00 — Føyka kunstgress 2 7er B</div>
+        </div>
+      </div>
+
+      <div class="cal-event">
+        <div class="cal-date"><div class="day">11</div><div class="weekday">Tor</div></div>
+        <div class="cal-info">
+          <div class="title"><span class="tag tag-green">Grønn</span> vs Asker SK Blå <span class="tag tag-home">Hjemme</span></div>
+          <div class="detail">Kl 19:00 — Nesøya kunstgress 7er A</div>
+        </div>
+      </div>
+
+      <div class="cal-event cup-event">
+        <div class="cal-date"><div class="day">13</div><div class="weekday">Lør</div></div>
+        <div class="cal-info">
+          <div class="title"><span class="tag tag-blue">CUP</span> Nesøya Sommercup 2026</div>
+          <div class="detail">13–14 juni — Nesøya. Begge lag deltar!</div>
+        </div>
+      </div>
+
+      <div class="cal-event training-event">
+        <div class="cal-date"><div class="day">15</div><div class="weekday">Man</div></div>
+        <div class="cal-info">
+          <div class="title"><span class="tag tag-purple">Trening</span> Siste trening før sommer!</div>
+          <div class="detail">Kl 18:00–19:00 — Nesøya Fotballbane</div>
+        </div>
+      </div>
+
+      <div class="cal-event">
+        <div class="cal-date"><div class="day">16</div><div class="weekday">Tir</div></div>
+        <div class="cal-info">
+          <div class="title"><span class="tag tag-blue">Blå</span> vs Jardar 1 <span class="tag tag-home">Hjemme</span></div>
+          <div class="detail">Kl 19:00 — Nesøya kunstgress 7er B</div>
+        </div>
+      </div>
+
+      <div class="cal-event">
+        <div class="cal-date"><div class="day">18</div><div class="weekday">Tor</div></div>
+        <div class="cal-info">
+          <div class="title"><span class="tag tag-green">Grønn</span> vs Haslum 5 <span class="tag tag-away">Borte</span></div>
+          <div class="detail">Kl 18:00 — Haslum kunstgress 7er C</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- JULY -->
+    <div class="calendar-month">
+      <h3>☀️ Juli 2026</h3>
+      <div class="summer-break">
+        ☀️ Sommerferie — ingen kamper eller trening. God sommer!
+      </div>
+    </div>
+
+    <!-- AUGUST -->
+    <div class="calendar-month">
+      <h3>⚡ August 2026</h3>
+
+      <div class="cal-event">
+        <div class="cal-date"><div class="day">18</div><div class="weekday">Tir</div></div>
+        <div class="cal-info">
+          <div class="title"><span class="tag tag-blue">Blå</span> vs Øvrevoll Hosle Snakes <span class="tag tag-home">Hjemme</span></div>
+          <div class="detail">Kl 19:00 — Nesøya kunstgress 7er A</div>
+        </div>
+      </div>
+
+      <div class="cal-event">
+        <div class="cal-date"><div class="day">19</div><div class="weekday">Ons</div></div>
+        <div class="cal-info">
+          <div class="title"><span class="tag tag-green">Grønn</span> vs Øvrevoll Hosle 1 <span class="tag tag-away">Borte</span></div>
+          <div class="detail">Kl 19:10 — Eikeli kunstgress 7er</div>
+        </div>
+      </div>
+
+      <div class="cal-event">
+        <div class="cal-date"><div class="day">25</div><div class="weekday">Tir</div></div>
+        <div class="cal-info">
+          <div class="title"><span class="tag tag-blue">Blå</span> vs Stabæk 5 <span class="tag tag-away">Borte</span></div>
+          <div class="detail">Kl 19:00 — Frembanen kunstgress 7er</div>
+          <div class="title" style="margin-top:0.4rem;"><span class="tag tag-green">Grønn</span> vs Hvalstad City <span class="tag tag-home">Hjemme</span></div>
+          <div class="detail">Kl 18:00 — Nesøya kunstgress 7er B</div>
+        </div>
+      </div>
+
+      <div class="cal-event special-event">
+        <div class="cal-date"><div class="day">~</div><div class="weekday"></div></div>
+        <div class="cal-info">
+          <div class="title"><span class="tag tag-orange">Hendelse</span> Internturnering (slutten av august)</div>
+          <div class="detail">Eksakt dato ikke fastsatt ennå</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SEPTEMBER -->
+    <div class="calendar-month">
+      <h3>⚡ September 2026</h3>
+
+      <div class="cal-event">
+        <div class="cal-date"><div class="day">1</div><div class="weekday">Tir</div></div>
+        <div class="cal-info">
+          <div class="title"><span class="tag tag-blue">Blå</span> vs Gui Blå 2 <span class="tag tag-home">Hjemme</span></div>
+          <div class="detail">Kl 19:00 — Nesøya kunstgress 7er A</div>
+        </div>
+      </div>
+
+      <div class="cal-event">
+        <div class="cal-date"><div class="day">3</div><div class="weekday">Tor</div></div>
+        <div class="cal-info">
+          <div class="title"><span class="tag tag-green">Grønn</span> vs Frisk Asker 1 <span class="tag tag-away">Borte</span></div>
+          <div class="detail">Kl 18:00 — Frisk Arena 7er A</div>
+        </div>
+      </div>
+
+      <div class="cal-event">
+        <div class="cal-date"><div class="day">8</div><div class="weekday">Tir</div></div>
+        <div class="cal-info">
+          <div class="title"><span class="tag tag-blue">Blå</span> vs Hvalstad United <span class="tag tag-away">Borte</span></div>
+          <div class="detail">Kl 19:00 — Hvalstad Idrettspark</div>
+          <div class="title" style="margin-top:0.4rem;"><span class="tag tag-green">Grønn</span> vs Gui Blå 1 <span class="tag tag-home">Hjemme</span></div>
+          <div class="detail">Kl 19:00 — Nesøya kunstgress 7er B</div>
+        </div>
+      </div>
+
+      <div class="cal-event">
+        <div class="cal-date"><div class="day">15</div><div class="weekday">Tir</div></div>
+        <div class="cal-info">
+          <div class="title"><span class="tag tag-green">Grønn</span> vs Lommedalen Gul <span class="tag tag-home">Hjemme</span></div>
+          <div class="detail">Kl 19:00 — Nesøya kunstgress 7er B</div>
+        </div>
+      </div>
+
+      <div class="cal-event">
+        <div class="cal-date"><div class="day">16</div><div class="weekday">Ons</div></div>
+        <div class="cal-info">
+          <div class="title"><span class="tag tag-blue">Blå</span> vs Holmen Falcons <span class="tag tag-away">Borte</span></div>
+          <div class="detail">Kl 18:25 — Holmen gress 7er A</div>
+        </div>
+      </div>
+
+      <div class="cal-event">
+        <div class="cal-date"><div class="day">22</div><div class="weekday">Tir</div></div>
+        <div class="cal-info">
+          <div class="title"><span class="tag tag-blue">Blå</span> vs Lommedalen Lions <span class="tag tag-home">Hjemme</span></div>
+          <div class="detail">Kl 19:00 — Nesøya kunstgress 7er A</div>
+          <div class="title" style="margin-top:0.4rem;"><span class="tag tag-green">Grønn</span> vs Holmen Eagles <span class="tag tag-away">Borte</span></div>
+          <div class="detail">Kl 18:00 — Holmen gress 7er A</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- OCTOBER -->
+    <div class="calendar-month">
+      <h3>⚡ Oktober 2026</h3>
+
+      <div class="cal-event">
+        <div class="cal-date"><div class="day">5</div><div class="weekday">Man</div></div>
+        <div class="cal-info">
+          <div class="title"><span class="tag tag-blue">Blå</span> vs Haslum 4 <span class="tag tag-away">Borte</span></div>
+          <div class="detail">Kl 19:00 — Haslum kunstgress 7er D</div>
+        </div>
+      </div>
+
+      <div class="cal-event">
+        <div class="cal-date"><div class="day">8</div><div class="weekday">Tor</div></div>
+        <div class="cal-info">
+          <div class="title"><span class="tag tag-green">Grønn</span> vs Billingstad Lyn <span class="tag tag-home">Hjemme</span></div>
+          <div class="detail">Kl 19:00 — Nesøya kunstgress 7er B</div>
+        </div>
+      </div>
+
+      <div class="cal-event">
+        <div class="cal-date"><div class="day">12</div><div class="weekday">Man</div></div>
+        <div class="cal-info">
+          <div class="title"><span class="tag tag-blue">Blå</span> vs Asker SK Bondi 2 <span class="tag tag-home">Hjemme</span></div>
+          <div class="detail">Kl 19:00 — Nesøya kunstgress 7er B</div>
+        </div>
+      </div>
+
+      <div class="cal-event">
+        <div class="cal-date"><div class="day">13</div><div class="weekday">Tir</div></div>
+        <div class="cal-info">
+          <div class="title"><span class="tag tag-green">Grønn</span> vs Asker SK Blå <span class="tag tag-away">Borte</span></div>
+          <div class="detail">Kl 19:00 — Føyka kunstgress 2 7er A</div>
+        </div>
+      </div>
+
+      <div class="cal-event">
+        <div class="cal-date"><div class="day">20</div><div class="weekday">Tir</div></div>
+        <div class="cal-info">
+          <div class="title"><span class="tag tag-blue">Blå</span> vs Jardar 1 <span class="tag tag-away">Borte</span></div>
+          <div class="detail">Kl 18:00 — Bjørnegård kunstgress 7er B</div>
+        </div>
+      </div>
+
+      <div class="cal-event">
+        <div class="cal-date"><div class="day">21</div><div class="weekday">Ons</div></div>
+        <div class="cal-info">
+          <div class="title"><span class="tag tag-green">Grønn</span> vs Haslum 5 <span class="tag tag-home">Hjemme</span></div>
+          <div class="detail">Kl 19:00 — Nesøya kunstgress 7er A</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="special-event cal-event">
+      <div class="cal-date"><div class="day">~</div><div class="weekday"></div></div>
+      <div class="cal-info">
+        <div class="title"><span class="tag tag-orange">Hendelse</span> Høsttrening (august–oktober)</div>
+        <div class="detail">Treningsdatoer for høsten fastsettes senere</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 3. NFF GUIDELINES -->
+<div class="section" id="nff">
+  <div class="section-header" onclick="toggleSection(this)">
+    <h2>📋 NFF retningslinjer (10–11 år)</h2>
+    <span class="toggle">▼</span>
+  </div>
+  <div class="section-body">
+    <div class="info-box">
+      Norges Fotballforbund sine retningslinjer for 10–11-årsklassene. Disse er bindende for alle lag.
+    </div>
+    <ul class="rule-list">
+      <li><strong>7v7 format</strong> — kamper spilles 7 mot 7 på tilpasset bane</li>
+      <li><strong>Anbefalt treningsfrekvens:</strong> 3 treninger/uke + 2 ekstra aktiviteter. Vi kjører per nå 1 trening/uke + kamper</li>
+      <li><strong>Lik spilletid:</strong> Alle spillere skal få tilnærmet lik spilletid i kamper</li>
+      <li><strong>Blandede lag:</strong> Ingen faste nivågrupper. Lag settes sammen med blandet ferdighetsnivå</li>
+      <li><strong>Glede og utvikling:</strong> Fokus på spilleglede og individuell utvikling, ikke resultater</li>
+      <li><strong>Ball størrelse 4</strong> (350–390g)</li>
+      <li><strong>Heading tillatt</strong> men kontrollert — begrenset mengdetrening på heading</li>
+      <li><strong>Trenerkompetanse:</strong> Minimum én kvalifisert trener per 12 spillere (Grasrottreneren del 1)</li>
+      <li><strong>Klubbdommer:</strong> Default for kamper i denne aldersklassen</li>
+    </ul>
+  </div>
+</div>
+
+<!-- 4. TRAINING FOCUS -->
+<div class="section" id="treningsfokus">
+  <div class="section-header" onclick="toggleSection(this)">
+    <h2>🎯 Treningsfokus per måned</h2>
+    <span class="toggle">▼</span>
+  </div>
+  <div class="section-body">
+    <div class="focus-grid">
+      <div class="focus-card" style="border-top-color: var(--blue);">
+        <div class="month-label" style="color:var(--blue-bright);">April</div>
+        <h4>Sesongstart — grunnleggende</h4>
+        <p>Ballkontroll, pasninger, 1v1-dueller. Få beina i gang etter vinteren. Enkel oppvarming med ball, lav intensitet første ukene.</p>
+      </div>
+      <div class="focus-card" style="border-top-color: var(--blue);">
+        <div class="month-label" style="color:var(--blue-bright);">Mai</div>
+        <h4>Oppbygging og samspill</h4>
+        <p>Oppbyggende spill, småbanespill, posisjonering i 7v7. Introduser enkle spillemønstre. Fokus på å spille seg ut bakfra.</p>
+      </div>
+      <div class="focus-card" style="border-top-color: var(--green);">
+        <div class="month-label" style="color:var(--green-bright);">Juni</div>
+        <h4>Kampforberedelse</h4>
+        <p>Døde baller, lagsamhold, forberedelse til Sommercup. Øvelser på hjørnespark, frispark, innkast. Motivasjonsbygging!</p>
+      </div>
+      <div class="focus-card" style="border-top-color: var(--dark-border);">
+        <div class="month-label" style="color:var(--white-dim);">Juli</div>
+        <h4>Sommerferie</h4>
+        <p>Ingen organisert trening. Oppfordre spillere til egentrening og lek med ball.</p>
+      </div>
+      <div class="focus-card" style="border-top-color: var(--green);">
+        <div class="month-label" style="color:var(--green-bright);">August</div>
+        <h4>Re-start etter sommeren</h4>
+        <p>Fysisk aktivitet, ballmestring, ny sesongforberedelse. Få gruppa samlet igjen. Fokus på teknikk og bevegelsesglede.</p>
+      </div>
+      <div class="focus-card" style="border-top-color: var(--blue);">
+        <div class="month-label" style="color:var(--blue-bright);">September</div>
+        <h4>Toppsesong — taktikk</h4>
+        <p>Taktisk bevissthet, pressing, overgangsspill. Spillerne begynner å forstå rombruk og samarbeid på banen.</p>
+      </div>
+      <div class="focus-card" style="border-top-color: var(--green);">
+        <div class="month-label" style="color:var(--green-bright);">Oktober</div>
+        <h4>Sesongavslutning</h4>
+        <p>Morsomme økter, evaluering av fremgang. Feire det vi har oppnådd. Sosialt samhold. Eventuelt avslutningskamp.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 5. TRAINING SESSION TEMPLATE -->
+<div class="section" id="treningsokt">
+  <div class="section-header" onclick="toggleSection(this)">
+    <h2>⏱️ Mal for treningsøkt (60 min)</h2>
+    <span class="toggle">▼</span>
+  </div>
+  <div class="section-body">
+    <div class="info-box">
+      Standard 60-minutters økt. Tilpass tema etter periodens fokusområde. Hold det enkelt, aktivt og morsomt!
+    </div>
+
+    <div class="timeline-block">
+      <div class="timeline-time">0–10 min</div>
+      <div class="timeline-content">
+        <h4>Oppvarming med ball</h4>
+        <p>Rondo, dribling i ruter, ballkontroll-øvelser. Alle har ball. Øk kroppstemp og fokus.</p>
+      </div>
+    </div>
+    <div class="timeline-block">
+      <div class="timeline-time">10–25 min</div>
+      <div class="timeline-content" style="border-left-color: var(--green);">
+        <h4>Teknisk øvelse (dagens tema)</h4>
+        <p>Pasning, skudd, 1v1, heading — velg ett tema. Korte køer, mye repetisjon, positiv feedback.</p>
+      </div>
+    </div>
+    <div class="timeline-block">
+      <div class="timeline-time">25–45 min</div>
+      <div class="timeline-content" style="border-left-color: var(--orange);">
+        <h4>Småbanespill (3v3, 4v4)</h4>
+        <p>Mange ballberøringer, mye scoring. Små baner = mye involvert. Roter lag hvert 5. minutt.</p>
+      </div>
+    </div>
+    <div class="timeline-block">
+      <div class="timeline-time">45–55 min</div>
+      <div class="timeline-content" style="border-left-color: var(--blue);">
+        <h4>Kamp (7v7 eller modifisert)</h4>
+        <p>Full kamp eller med særregler (f.eks. 3-touch, må drible forbi en spiller før skudd). Spilleglede!</p>
+      </div>
+    </div>
+    <div class="timeline-block">
+      <div class="timeline-time">55–60 min</div>
+      <div class="timeline-content" style="border-left-color: var(--white-dim);">
+        <h4>Nedkjøling og oppsummering</h4>
+        <p>Lett trav, tøyning. Kort oppsummering: «Hva var bra i dag?» Positiv avslutning.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 6. TODO / ACTION ITEMS -->
+<div class="section" id="todo">
+  <div class="section-header" onclick="toggleSection(this)">
+    <h2>✅ Gjøremålsliste (fra møte 24. mars)</h2>
+    <span class="toggle">▼</span>
+  </div>
+  <div class="section-body">
+    <ul class="checklist">
+      <li><input type="checkbox"><span>Pass på at sponsormerke er helt på alle drakter — <strong style="color:var(--green);">Eskil</strong></span></li>
+      <li><input type="checkbox"><span>Skaffe faste drakter, sjekk størrelse per spiller — <strong style="color:var(--green);">Robin</strong></span></li>
+      <li><input type="checkbox"><span>Skaffe faste baller — 1 nett per lag, 1 ball per spiller — <strong style="color:#1565C0;">Fredrik</strong></span></li>
+      <li><input type="checkbox"><span>Klubbdommer er default for kamper — <strong style="color:#1565C0;">Ole-Christian</strong></span></li>
+      <li><input type="checkbox"><span>Grasrottrenerkurs del 1 — meld på min. 1 per lag (minidrett.no) — <strong style="color:#1565C0;">PW</strong></span></li>
+      <li><input type="checkbox"><span>Meld på lag til Nesøya Sommercup 13–14 juni — <strong style="color:#1565C0;">PW</strong></span></li>
+      <li><input type="checkbox"><span>Dialog med Holmen om gjensidig cup-deltakelse — <strong style="color:var(--green);">Eskil</strong></span></li>
+      <li><input type="checkbox"><span>Planlegg internturnering slutten av august — <strong style="color:var(--green);">Øyvind</strong></span></li>
+      <li><input type="checkbox"><span>Foreldremøte i april/mai — <strong style="color:#1565C0;">PW</strong></span></li>
+      <li><input type="checkbox"><span>Sjekk at alle trenere har min. Grasrottreneren del 1 — <strong style="color:#1565C0;">PW</strong></span></li>
+    </ul>
+  </div>
+</div>
+
+<!-- 7. EQUIPMENT CHECKLIST -->
+<div class="section" id="utstyr">
+  <div class="section-header" onclick="toggleSection(this)">
+    <h2>🎽 Utstyrsliste (per lag)</h2>
+    <span class="toggle">▼</span>
+  </div>
+  <div class="section-body">
+    <div class="equip-grid">
+      <div class="equip-item">⚽ Baller — 1 per spiller + nett</div>
+      <div class="equip-item">👕 Drakter (hele, med sponsormerke)</div>
+      <div class="equip-item">🔶 Kjegler / markører</div>
+      <div class="equip-item">🟡 Vester (for trening)</div>
+      <div class="equip-item">🏥 Førstehjelpsskrin</div>
+      <div class="equip-item">📋 Kampskjema</div>
+    </div>
+  </div>
+</div>
+
+<!-- 8. KEY CONTACTS -->
+<div class="section" id="kontakter">
+  <div class="section-header" onclick="toggleSection(this)">
+    <h2>📞 Kontaktliste</h2>
+    <span class="toggle">▼</span>
+  </div>
+  <div class="section-body">
+    <p style="color:#64748B; font-size:0.9rem; margin-bottom:0.75rem;">Kontaktinfo for trenere og lagledere finnes i Spond-gruppen «Nesøya IL Fotball G2016».</p>
+    <table>
+      <thead>
+        <tr><th>Rolle</th><th>Navn</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Lagleder</td><td>Per William Frøisland</td></tr>
+        <tr><td>Trener <span class="tag tag-green">Grønn</span></td><td>Eskil Hytten</td></tr>
+        <tr><td>Trener <span class="tag tag-blue">Blå</span></td><td>Fredrik Jore</td></tr>
+        <tr><td>Trener</td><td>Ole-Christian Ekeberg</td></tr>
+        <tr><td>Trener</td><td>Robin Johansson</td></tr>
+        <tr><td>Trener</td><td>Øyvind Rasmussen</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- 9. KEY LINKS -->
+<div class="section" id="lenker">
+  <div class="section-header" onclick="toggleSection(this)">
+    <h2>🔗 Nyttige lenker</h2>
+    <span class="toggle">▼</span>
+  </div>
+  <div class="section-body">
+    <div class="link-grid">
+      <a class="link-card" href="https://www.fotball.no/fotballdata/klubb/hjem/?fiksId=107" target="_blank">
+        <div class="link-icon">⚽</div>
+        <div>Fotball.no — Nesøya IL</div>
+      </a>
+      <a class="link-card" href="https://www.fotball.no/fotballdata/lag/hjem/?fiksId=139135" target="_blank">
+        <div class="link-icon" style="color:var(--blue-bright);">🔵</div>
+        <div>Nesøya G10 Blå — kampoppsett</div>
+      </a>
+      <a class="link-card" href="https://www.fotball.no/fotballdata/lag/hjem/?fiksId=87573" target="_blank">
+        <div class="link-icon" style="color:var(--green-bright);">🟢</div>
+        <div>Nesøya G10 Grønn — kampoppsett</div>
+      </a>
+      <a class="link-card" href="https://www.fotball.no/barn-og-ungdom/retningslinjer-for-barne--og-ungdomsfotball/10-11-arsklassene/" target="_blank">
+        <div class="link-icon">📖</div>
+        <div>NFF 10–11 år retningslinjer</div>
+      </a>
+      <a class="link-card" href="https://www.minidrett.no" target="_blank">
+        <div class="link-icon">🎓</div>
+        <div>Grasrottreneren påmelding</div>
+      </a>
+      <a class="link-card" href="https://www.fotball.no/kretser/oslo/klubb-leder-og-trener/trenerkurs/c-lisens/" target="_blank">
+        <div class="link-icon">📚</div>
+        <div>NFF Oslo trenerkurs</div>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- NORWAY MATCHES -->
+<div class="section" id="landslaget">
+  <div class="section-header" onclick="toggleSection(this)">
+    <h2>🇳🇴 Landslaget 2026</h2>
+    <span class="toggle">▼</span>
+  </div>
+  <div class="section-body">
+    <div class="info-box" style="border-left-color: #BA2025;">
+      Norge er klare for VM i USA! Kamper å følge med på — perfekt samtalestoff på trening ⚽🔥
+    </div>
+
+    <h3 style="font-family:'Barlow Condensed'; font-size:1rem; font-weight:700; text-transform:uppercase; letter-spacing:0.05em; color:var(--gold); margin-bottom:0.75rem;">Herrer — VM 2026 (USA)</h3>
+    <table>
+      <thead>
+        <tr><th>Dato</th><th>Kamp</th><th>Sted</th><th>Turnering</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>27. mars</td><td>Nederland – Norge</td><td>TBA</td><td>Privatlandskamp</td></tr>
+        <tr><td>31. mars</td><td>Norge – Sveits</td><td>Ullevaal, Oslo</td><td>Privatlandskamp</td></tr>
+        <tr style="background:#F0FDF4;"><td><strong>17. juni</strong></td><td><strong>Norge – Irak/Surinam/Bolivia</strong></td><td>Gillette Stadium, Boston</td><td style="color:#166534;font-weight:700;">VM Gruppespill</td></tr>
+        <tr style="background:#F0FDF4;"><td><strong>23. juni</strong></td><td><strong>Norge – Senegal</strong></td><td>MetLife Stadium, New Jersey</td><td style="color:#166534;font-weight:700;">VM Gruppespill</td></tr>
+        <tr style="background:#F0FDF4;"><td><strong>26. juni</strong></td><td><strong>Frankrike – Norge</strong></td><td>Gillette Stadium, Boston</td><td style="color:#166534;font-weight:700;">VM Gruppespill</td></tr>
+      </tbody>
+    </table>
+
+    <h3 style="font-family:'Barlow Condensed'; font-size:1rem; font-weight:700; text-transform:uppercase; letter-spacing:0.05em; color:var(--gold); margin: 1.25rem 0 0.75rem;">Kvinner — VM-kvalifisering</h3>
+    <table>
+      <thead>
+        <tr><th>Dato</th><th>Kamp</th><th>Sted</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>14. april</td><td>Norge – Slovenia</td><td>Ullevaal, Oslo</td></tr>
+        <tr><td>18. april</td><td>Slovenia – Norge</td><td>TBA</td></tr>
+        <tr><td>5. juni</td><td>Tyskland – Norge</td><td>TBA</td></tr>
+        <tr><td>9. juni</td><td>Norge – Østerrike</td><td>Ullevaal, Oslo</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- 10. RED DAYS -->
+<div class="section collapsed" id="helligdager">
+  <div class="section-header" onclick="toggleSection(this)">
+    <h2>🔴 Røde dager 2026 (ingen trening)</h2>
+    <span class="toggle">▼</span>
+  </div>
+  <div class="section-body">
+    <table>
+      <thead>
+        <tr><th>Dato</th><th>Dag</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>2. april</td><td>Skjærtorsdag</td></tr>
+        <tr><td>3. april</td><td>Langfredag</td></tr>
+        <tr><td>5. april</td><td>1. påskedag</td></tr>
+        <tr><td>6. april</td><td>2. påskedag</td></tr>
+        <tr><td>1. mai</td><td>Arbeidernes dag</td></tr>
+        <tr><td>14. mai</td><td>Kristi himmelfartsdag</td></tr>
+        <tr><td>17. mai</td><td>Grunnlovsdagen</td></tr>
+        <tr><td>24. mai</td><td>1. pinsedag</td></tr>
+        <tr><td>25. mai</td><td>2. pinsedag</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  <div class="logo">⚽</div>
+  Nesøya IL Fotball — G2016 Årsplan 2026<br>
+  Sist oppdatert: 24. mars 2026 &nbsp;|&nbsp; Lagleder: Per William Frøisland
+</div>
+
+<script>
+function toggleSection(header) {
+  header.parentElement.classList.toggle('collapsed');
+}
+
+// Save checkbox state to localStorage
+document.querySelectorAll('.checklist input[type="checkbox"]').forEach(function(cb, i) {
+  var key = 'g2016-todo-' + i;
+  cb.checked = localStorage.getItem(key) === 'true';
+  cb.addEventListener('change', function() {
+    localStorage.setItem(key, cb.checked);
+    cb.parentElement.style.opacity = cb.checked ? '0.4' : '1';
+    cb.parentElement.style.textDecoration = cb.checked ? 'line-through' : 'none';
+  });
+  if (cb.checked) {
+    cb.parentElement.style.opacity = '0.4';
+    cb.parentElement.style.textDecoration = 'line-through';
+  }
+});
+</script>
+
+</body>
+</html>
